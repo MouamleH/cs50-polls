@@ -1,0 +1,16 @@
+<configuration>
+
+    <conversionRule conversionWord="cHighlight"
+                    converterClass="me.mouamle.cs50_polls.util.CustomHighlightConverter"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS, Asia/Baghdad} [%cHighlight(%-5level)] %cyan(%20.20logger{1}).%boldCyan(%-30method) : %msg %ex%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>
